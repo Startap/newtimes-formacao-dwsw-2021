@@ -1,0 +1,19 @@
+plugins:
+  phpmd:
+    enabled: true
+    config:
+      file_extensions:
+        - php
+      rulesets: "cleancode,controversial,naming,design,unusedcode"
+  phpcodesniffer:
+    enabled: true
+    standard: "PSR1,PSR2"
+  csslint:
+    enabled: true
+  fixme:
+    enabled: true
+    config:
+      strings:
+        - TODO
+        - FIXME
+        - BUG
