@@ -11,8 +11,8 @@
         
         'headline' => [
             'title' => 'Formação Desenvolvimento Web - SMALL WINS',
-            'subtitle' => 'Torne-se um desenvolvedor web profissional',
-            'callout' => 'Desenvolvimento web na prática: Do ZERO ao mercado de trabalho ainda em 2021',
+            'subtitle' => 'Desenvolvimento web na prática: Do ZERO ao mercado de trabalho ainda em 2021',
+            'callout' => 'Torne-se um desenvolvedor web profissional',
             'button_cta' => 'Quero me inscrever na Formação DWSW',
         ],
 
