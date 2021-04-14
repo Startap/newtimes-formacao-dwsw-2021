@@ -1,10 +1,12 @@
 /** Variables declaration **/
 
+@import "animations.scss";
+
 $font-face-title: 'Space Mono', monospace;
 $font-face-body: 'Work Sans', sans-serif;
 $font-size-default: 16px;
 
-$color-dark-grey: rgba(17,24,39, 1);
+$color-dark-grey: rgb(109, 138, 199);
 $color-light-purple: #5b21b6;
 $color-light-blue: #5b21b6;
 
@@ -17,6 +19,8 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    box-sizing: border-box;
+    background: linear-gradient(45deg, $color-light-blue, $color-light-blue);
 }
 
 section {
@@ -24,7 +28,8 @@ section {
     margin: 0;
     width: 100%;
 
-    font-family: 1rem;
+    font-size: 1rem;
+    font-family: $font-face-body;
 }
 
 footer {
@@ -33,4 +38,26 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-face-title;
+}
+
+.button_cta {
+    border: none;
+    position: relative;
+    text-transform: uppercase;
+
+    line-height: 200%;
+    font-family: $font-face-title;
+    font-size: 1.2em;
+
+    padding: 0em 2em;
+
+    &:after {
+        position: relative;
+        content: "_";
+        font-size: 1.1em;
+        padding: 0 0 0 3px;
+        display: inline-block;
+        animation: blink 1s steps(5, start) infinite;
+        visibility: visible;
+    }
 }
