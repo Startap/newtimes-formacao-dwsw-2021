@@ -2,10 +2,6 @@
     <article class="section__article_wrapper" id="article__headline">
         <h1><?php echo $this->language['headline']['title']; ?></h1>
         <h2><?php echo $this->language['headline']['subtitle']; ?></h2>
-
-        <a href="https://pay.hotmart.com/G51468673P" target="_blank" rel="norel nofollow">
-            <button class="button_cta"><span><?php echo $this->language['headline']['button_cta']; ?></span></button>
-        </a>
     </article>
 
     <article class="youtube__container">
@@ -22,6 +18,12 @@
             </div>
         </div>
     </article>
+
+    <div class="button__container">
+        <a href="https://pay.hotmart.com/G51468673P" target="_blank" rel="norel nofollow">
+            <button class="button_cta"><span><?php echo $this->language['headline']['button_cta']; ?></span></button>
+        </a>
+    </div>
 </section>
 
 <section class="section__container" id="target__wrapper">
@@ -92,7 +94,9 @@
 
             <img src="/assets/images/selo_garantia.png" alt="Selo de sete dias de garantia">
 
-            <button class="button_cta scroll_top_back">quero entrar na formação dwsw 2021</button>
+            <a href="https://pay.hotmart.com/G51468673P" target="_blank" rel="norel nofollow">
+                <button class="button_cta"><span>quero entrar na formação dwsw 2021</span></button>
+            </a>
         </div>
     </article>
 </section>
@@ -144,9 +148,10 @@
             echo implode(' ', $faqItems);
             ?>
         </div>
-    
-        <button class="button_cta scroll_top_back">quero entrar na formação dwsw 2021</button>
-    
+        
+        <a href="https://pay.hotmart.com/G51468673P" target="_blank" rel="norel nofollow">
+            <button class="button_cta"><span>quero entrar na formação dwsw 2021</span></button>
+        </a>
     </article>
 </section>
 
