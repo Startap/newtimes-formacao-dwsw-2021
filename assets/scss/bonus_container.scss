@@ -1,0 +1,56 @@
+@use "variables.scss";
+
+.bonus_item__wrapper {
+    padding: 2em 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: lighten($color-light-purple, 28%);
+    color: $color-dark-purple;
+    box-shadow: 0 4px 10px -4px rgba(0,0,0,.5);
+    z-index: 0;
+    border-bottom: 3px solid darken($color-light-purple, 10%);
+    position: relative;
+
+    &:after {
+        content: '';
+        height: 90%;
+        width: 90%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background: url('/assets/images/icon__star_rate.svg') no-repeat left center / contain;
+        z-index: -1;
+        opacity: 0.1
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        &:nth-of-type(2n)::after {
+            background-position: right center;
+        }
+    }
+}
+
+.bonus_group__wrapper {
+    font-size: 0.9rem;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+        width: 85%;
+        margin: auto;
+    }
+
+    .bonus_item__description {
+        line-height: 130%;
+    }
+}
+
+#target__wrapper p {
+    max-width: 1000px;
+    margin: auto;
+    background: transparent url('/assets/images/target__background.svg') no-repeat center left / contain;
+}

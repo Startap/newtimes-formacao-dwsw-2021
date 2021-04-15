@@ -1,0 +1,105 @@
+@use "variables.scss";
+
+#section__headline {
+    margin: auto;
+    padding-top: 1em;
+
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: flex-start;
+
+    background-blend-mode: screen;
+    background: url("/assets/images/main__section__background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: $color-light-purple;
+    position: relative;
+    z-index: 0;
+    
+    @media screen and (min-width: $breakpoint-desktop) {
+        height: fit-content;
+        padding-top: 8em;
+    }
+
+    &:after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: 1;
+        opacity: 0.7;
+
+        background: linear-gradient(45deg, $color-light-purple, darken($color-light-purple, 3%));
+    }
+}
+
+#article__headline {
+    @media screen and (max-width: $breakpoint-mobile) {
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-bottom: 50px;
+        margin-left: 2em;
+    }
+    
+    @media screen and (min-width: $breakpoint-desktop) {
+        max-width: 46vw;
+        margin-left: 5em;
+    }
+
+    position: relative;
+    z-index: 4;
+
+    h1,
+    p {
+        margin-bottom: 0.3em;
+        color: $color-pure-white;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0px;
+        font-size: 2.3em;
+
+        span {
+            display: block;
+            font-size: 1.1em;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                width: 20%;
+                height: 5px;
+                border-radius: 5px;
+                left: 0;
+                bottom: -5px;
+                background: $color-accent-yellow;
+                content: "";
+            }
+        }
+    }
+
+    h2 {
+        font-family: $font-face-body;
+        font-size: 1.5em;
+        color: $color-pure-white;
+    }
+
+    p {
+        letter-spacing: 1px;
+        font-family: $font-face-body;
+        font-variant: all-small-caps;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .button_cta {
+        margin-top: 4em;
+    }
+}

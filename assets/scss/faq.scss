@@ -1,0 +1,94 @@
+@use "variables.scss";
+
+.section__article_wrapper.faq__main_wrapper {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto 5em auto;
+}
+
+.faq__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-card:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
+.faq-card {
+    background: darken($color-pure-white, 5%);
+    padding: 1.5em 35px;
+    cursor: pointer;
+    box-shadow: 0 5px 21px -7px #222;
+}
+
+.faq-card .faq-question {
+    font-size: 1.1rem;
+    font-family: $font-face-body;
+    box-sizing: border-box;
+    color: $color-dark-purple
+}
+
+.faq-card .faq-answer {
+    font-size: 0.9rem;
+    color: $color-dark-purple;
+    box-sizing: border-box;
+}
+
+.faq-question span {
+    position: relative;
+    padding-left: 2em;
+    line-height: 2em;
+    display: block;
+}
+
+.faq-question span::before {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 100%;
+    background: url('/assets/images/question_mark.svg') no-repeat center center / contain;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.faq-card:hover .faq-question span::before {
+}
+
+.faq-opened:hover .faq-question span::before {
+}
+
+.faq-opened .faq-question span::before {
+    transition: all 0.5s ease-in-out;
+    background: url('/assets/images/question_mark.svg') no-repeat center center / contain;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.faq-answer span {
+    line-height: 125%;
+    position: relative;
+    padding: 1em 0 1em 20px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.faq-answer span::before {
+    content: '';
+    display: block;
+    left: 7px;
+    top: 5px;
+    background: $color-light-purple;
+    width: 4px;
+    height: 90%;
+    border-radius: 5px;
+    position: absolute;
+}
