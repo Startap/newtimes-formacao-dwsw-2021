@@ -18,6 +18,11 @@
     flex-direction: column;
 }
 
+.faq__main_wrapper a {
+    width: max-content;
+    margin: auto;
+}
+
 .faq-card:not(:last-of-type) {
     margin-bottom: 1em;
 }

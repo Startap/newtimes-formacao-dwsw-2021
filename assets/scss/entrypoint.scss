@@ -60,6 +60,10 @@ h3 {
     font-size: 1.1em;
 }
 
+.button_container {
+    position: relative;
+}
+
 .button_cta {
     border: none;
     position: relative;
@@ -80,6 +84,13 @@ h3 {
     color: $color-dark-purple;
     cursor: pointer;
     transition: all .3s ease;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        line-height: 1em;
+        padding: 25px 20px;
+        box-sizing: border-box;
+        width: inherit;
+    }
 
     @media screen and (min-width: $breakpoint-tablet) {
         font-size: 1.2em;
@@ -148,15 +159,27 @@ h3 {
         left: 0;
         top: 0;
         content: "";
-        font-family: $font-face-icon;
 
-        opacity: 0.3;
+        opacity: 0.6;
         text-align: left;
         text-indent: 1em;
         font-size: 5em;
         z-index: -1;
-        transition: all .2s ease;
+        transition: all .3s ease;
+        filter: brightness(0) invert(0);
+        background: transparent url('/assets/images/target__background.svg') no-repeat center left / contain;
     }
+
+    &:hover::after {
+        filter: brightness(1) invert(1);
+        transform: scale(1.2);
+    }
+}
+
+#target__wrapper p {
+    max-width: 700px;
+    margin: auto;
+    transition: all .2s ease;
 }
 
 .about__image {

@@ -5,32 +5,39 @@
   }
 }
 #section__headline {
-  margin: auto;
-  padding-top: 1em;
-  display: flex;
-  flex-direction: column;
-  vertical-align: middle;
-  justify-content: flex-start;
   background-blend-mode: screen;
   background: url("/assets/images/main__section__background.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #5b21b6;
   position: relative;
+  box-sizing: border-box;
   z-index: 0;
 }
 @media screen and (min-width: 1000px) {
   #section__headline {
-    height: fit-content;
-    padding-top: 8em;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas: "lateral video" "botao video";
+    grid-auto-flow: dense;
+    padding: 3em 50px;
+  }
+  #section__headline #article__headline {
+    grid-area: lateral;
+  }
+  #section__headline .youtube__container {
+    grid-area: video;
+  }
+  #section__headline .button__container {
+    grid-area: botao;
   }
 }
 @media screen and (max-width: 768px) {
   #section__headline {
-    display: flex;
-    flex-direction: column-reverse;
+    padding: 1em 20px;
+  }
+  #section__headline .youtube__container {
+    margin: 2em auto 0em auto;
+    width: 100%;
   }
 }
 #section__headline:after {
@@ -40,7 +47,7 @@
   content: "";
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: -1;
   opacity: 0.7;
   background: linear-gradient(45deg, #5b21b6, #551fa9);
 }
@@ -48,24 +55,6 @@
 #article__headline {
   position: relative;
   z-index: 4;
-}
-@media screen and (max-width: 600px) {
-  #article__headline {
-    padding-bottom: 50px;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  #article__headline {
-    padding-bottom: 50px;
-    margin-left: 2em;
-  }
-}
-@media screen and (min-width: 1000px) {
-  #article__headline {
-    max-width: 46vw;
-    margin-left: 5em;
-  }
 }
 #article__headline h1,
 #article__headline p {
@@ -237,13 +226,6 @@
   line-height: 130%;
 }
 
-#target__wrapper p {
-  max-width: 700px;
-  margin: auto;
-  background: transparent url("/assets/images/target__background.svg") no-repeat center left/contain;
-  transition: all 0.2s ease;
-}
-
 .section__article_wrapper.faq__main_wrapper {
   width: 80%;
   max-width: 1200px;
@@ -259,6 +241,11 @@
 .faq__wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.faq__main_wrapper a {
+  width: max-content;
+  margin: auto;
 }
 
 .faq-card:not(:last-of-type) {
@@ -471,6 +458,10 @@ h3 {
   font-size: 1.1em;
 }
 
+.button_container {
+  position: relative;
+}
+
 .button_cta {
   border: none;
   position: relative;
@@ -488,6 +479,14 @@ h3 {
   color: #353861;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .button_cta {
+    line-height: 1em;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    width: inherit;
+  }
 }
 @media screen and (min-width: 768px) {
   .button_cta {
@@ -553,12 +552,23 @@ h3 {
   left: 0;
   top: 0;
   content: "";
-  font-family: "Material Icons", sans-serif;
-  opacity: 0.3;
+  opacity: 0.6;
   text-align: left;
   text-indent: 1em;
   font-size: 5em;
   z-index: -1;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(0);
+  background: transparent url("/assets/images/target__background.svg") no-repeat center left/contain;
+}
+#target__text:hover::after {
+  filter: brightness(1) invert(1);
+  transform: scale(1.2);
+}
+
+#target__wrapper p {
+  max-width: 700px;
+  margin: auto;
   transition: all 0.2s ease;
 }
 
