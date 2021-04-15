@@ -8,7 +8,7 @@
         <div class="iframe-container-width">
             <div id="iframe-video-container">
                 <?php
-                $youtubeVideoId = getenv('YOUTUBE_VIDEO');
+                $youtubeVideoId = $_ENV['YOUTUBE_VIDEO'];
                 $youtubeUrl = 'https://www.youtube.com/embed/%videoId?controls=0&modestbranding=1&showinfo=0&rel=0';
                 $youtubeUrl = str_replace('%videoId', $youtubeVideoId, $youtubeUrl);
                 ?>
@@ -20,7 +20,7 @@
     </article>
 
     <div class="button__container">
-        <a href="https://pay.hotmart.com/G51468673P" target="_blank" rel="norel nofollow">
+        <a href="<?php echo $_ENV['HOTMART_URL']; ?>" target="_blank" rel="norel nofollow">
             <button class="button_cta"><span><?php echo $this->language['headline']['button_cta']; ?></span></button>
         </a>
     </div>
@@ -94,7 +94,7 @@
 
             <img src="/assets/images/selo_garantia.png" alt="Selo de sete dias de garantia">
 
-            <a href="https://pay.hotmart.com/G51468673P" target="_blank" rel="norel nofollow">
+            <a href="<?php echo $_ENV['HOTMART_URL']; ?>" target="_blank" rel="norel nofollow">
                 <button class="button_cta"><span>quero entrar na formação dwsw 2021</span></button>
             </a>
         </div>
@@ -146,10 +146,10 @@
             }
 
             echo implode(' ', $faqItems);
-            ?>
+            ?>  
         </div>
-        
-        <a href="https://pay.hotmart.com/G51468673P" target="_blank" rel="norel nofollow">
+
+        <a href="<?php echo $_ENV['HOTMART_URL']; ?>" target="_blank" rel="norel nofollow">
             <button class="button_cta"><span>quero entrar na formação dwsw 2021</span></button>
         </a>
     </article>

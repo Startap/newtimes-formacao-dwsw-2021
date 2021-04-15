@@ -107,4 +107,8 @@
     .button_cta {
         margin-top: 4em;
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        text-align: center;
+    }
 }
