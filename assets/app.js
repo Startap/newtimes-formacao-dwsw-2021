@@ -18,18 +18,14 @@ setupFaqCardItems = function () {
     }
 }
 
+scrollToTop = function() {
+    window.scrollTo({behavior: 'smooth', left: 0, top: 0});
+}
 
 document.onreadystatechange = function () {
     if (document.readyState === 'complete') {
         let btnBackToForm = document.querySelector('.scroll_top_back')
-        btnBackToForm?.addEventListener('click', () => { scrollToForm() })
-
-        if (document.querySelector('form')) {
-            let inputElements = document.querySelectorAll('form input:not([type="hidden"])')
-            inputElements?.forEach(elInput => { elInput.addEventListener('input', (el) => { onInputFormFocus(el) }) })
-
-            setupFormActiveCampaign()
-        }
+        btnBackToForm?.addEventListener('click', () => { scrollToTop() })
 
         setupFaqCardItems()
     }

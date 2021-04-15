@@ -33,10 +33,10 @@
 
         'bonus' => [
             'Aula exclusiva com a turma <b>toda semana</b>, via Zoom',
-            'E-book com CEM ideias de projetos para criar o portefólio de programador',
+            'E-book com CEM ideias de projetos para criar o portfólio de programador',
             'Acesso a nossa comunidade secreta de programadores para aprimorar o networking',
             'Uma aula exclusiva para ajudar a conseguir vagas de programador no Exterior',
-            'Efetivação do melhor da turma para trabalhar com a gente',
+            'Contratação do melhor da turma para trabalhar com a gente',
         ],
 
         'about_instructor' => [

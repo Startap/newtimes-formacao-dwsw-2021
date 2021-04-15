@@ -2,7 +2,6 @@
     <article class="section__article_wrapper" id="article__headline">
         <h1><?php echo $this->language['headline']['title']; ?></h1>
         <h2><?php echo $this->language['headline']['subtitle']; ?></h2>
-        <p><?php echo $this->language['headline']['callout']; ?></p>
 
         <a href="https://pay.hotmart.com/G51468673P" target="_blank" rel="norel nofollow">
             <button class="button_cta"><span><?php echo $this->language['headline']['button_cta']; ?></span></button>
@@ -12,10 +11,10 @@
     <article class="youtube__container">
         <div class="iframe-container-width">
             <div id="iframe-video-container">
-                <?php 
-                    $youtubeVideoId = getenv('YOUTUBE_VIDEO');
-                    $youtubeUrl = 'https://www.youtube.com/embed/%videoId?controls=0&modestbranding=1&showinfo=0&rel=0';
-                    $youtubeUrl = str_replace('%videoId', $youtubeVideoId, $youtubeUrl);
+                <?php
+                $youtubeVideoId = getenv('YOUTUBE_VIDEO');
+                $youtubeUrl = 'https://www.youtube.com/embed/%videoId?controls=0&modestbranding=1&showinfo=0&rel=0';
+                $youtubeUrl = str_replace('%videoId', $youtubeVideoId, $youtubeUrl);
                 ?>
 
                 <iframe id="iframe-video" src="<?php echo $youtubeUrl; ?>" title="YouTube - Mentoria Advogado Expert" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -87,13 +86,13 @@
         <h1 class="section__title"><?php echo $this->language['section_titles']['value_price']; ?></h1>
 
         <div class="price__container">
-            <p class="price__header">O investimento inicial para a <b>Formação DWSW</b> é</p>
+            <p class="price__header">Estamos fazendo uma promoção por tempo limitado, e com vagas limitadas</p>
             <p class="price__old">R$ 2.994,00 (12x de R$ 249,50)</p>
-            <p class="price__current">R$ 997,00 <br>(12x de R$ 97,14)</p>
+            <p class="price__current">12x de R$ 97,14</p>
 
-            <span class="price__limited_promotion">
-                Promoção de lançamento por tempo limitado
-            </span>
+            <img src="/assets/images/selo_garantia.png" alt="Selo de sete dias de garantia">
+
+            <button class="button_cta scroll_top_back">quero entrar na formação dwsw 2021</button>
         </div>
     </article>
 </section>
@@ -145,6 +144,9 @@
             echo implode(' ', $faqItems);
             ?>
         </div>
+    
+        <button class="button_cta scroll_top_back">quero entrar na formação dwsw 2021</button>
+    
     </article>
 </section>
 

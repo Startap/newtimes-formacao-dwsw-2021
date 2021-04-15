@@ -7,6 +7,7 @@
 @import "bonus_container.scss";
 @import "faq.scss";
 @import "video_container.scss";
+@import "section_price.scss";
 
 * {
     text-rendering: optimizeLegibility;
@@ -70,15 +71,24 @@ h3 {
     font-size: 1.1em;
     border-radius: 4px;
     padding: 0 20px;
+    margin-top: 3em;
+
+    width: max-content;
 
     background: darken($color-accent-yellow, 8%);
     overflow: hidden;
     color: $color-dark-purple;
     cursor: pointer;
+    transition: all .3s ease;
 
     @media screen and (min-width: $breakpoint-tablet) {
         font-size: 1.2em;
         line-height: 300%;
+
+        &:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 10px 25px -14px rgba(0, 0, 0, 0.5);
+        }
     }
 
     &:after {
@@ -97,7 +107,8 @@ h3 {
     text-align: center;
     display: block;
     box-sizing: border-box;
-    margin: 2em auto 1.5em;
+    font-size: 2em;
+    margin: 1em auto .5em;
     font-weight: bold;
     color: $color-pure-white;
     position: relative;
@@ -144,6 +155,7 @@ h3 {
         text-indent: 1em;
         font-size: 5em;
         z-index: -1;
+        transition: all .2s ease;
     }
 }
 
@@ -213,6 +225,7 @@ h3 {
     margin: 3em auto 1em auto;
     padding: 3em 2em;
     box-sizing: border-box;
+    text-align: center;
 
     color: $color-pure-white;
     background: $color-dark-purple;
@@ -242,6 +255,11 @@ h3 {
         background: url("/assets/images/warning_mark.svg") no-repeat -3em center / contain;
         opacity: 0.1;
         content: "";
+        transition: all .2s ease;
+    }
+
+    &:hover::after {
+        background-color: #FF0000;
     }
 }
 
@@ -312,54 +330,3 @@ footer {
     }
 }
 
-#section__course_price {
-    background: $color-pure-white;
-    padding: 1em 0;
-    margin: 2em auto 0 auto;
-
-    .section__title {
-        color: $color-dark-purple;
-        padding: 0em auto 1.5em;
-    }
-    
-    .price__container {
-        color: $color-light-purple;
-        text-align: center;
-        line-height: 120%;
-        font-family: $font-face-title;
-
-        .price__header {
-            font-size: 1.1em;
-        }
-        .price__old {
-            text-decoration: line-through;
-            font-size: 0.9em;
-            font-size: 0.9em;
-            color: #ec7575;
-        }
-        .price__current {
-            font-weight: bold;
-            font-size: 1.5em;
-            margin-top: 5px;
-            color: #2fdc24;
-        }
-
-        .price__limited_promotion {
-            width: fit-content;
-            font-variant: all-small-caps;
-            margin: 2em auto 1em auto;
-            display: block;
-            font-weight: bold;
-            font-size: 1.4em;
-            padding: 1em 1.8em;
-            color: $color-pure-white;
-            background: $color-light-purple;
-            box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .4);
-
-            @media screen and (min-width: $breakpoint-tablet) {
-                transform: skew(-4deg, 0deg);
-        
-            }
-        }
-    }
-}

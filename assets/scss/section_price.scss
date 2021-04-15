@@ -1,0 +1,51 @@
+#section__course_price {
+    background: $color-pure-white;
+    padding: 1em 0;
+    margin: 2em auto 0 auto;
+
+    p { font-family: $font-face-body; }
+
+    .section__title {
+        color: $color-dark-purple;
+        padding: 0em auto 1.5em;
+    }
+    
+    .price__container {
+        color: $color-light-purple;
+        text-align: center;
+        line-height: 120%;
+        font-family: $font-face-title;
+
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        margin: auto;
+
+        .price__header {
+            font-size: 1em;
+        }
+        .price__old {
+            text-decoration: line-through;
+            font-size: 0.9em;
+            font-size: 0.9em;
+            color: #ec7575;
+        }
+        .price__current {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-top: 5px;
+            color: #2b9923;
+        }
+
+        img {
+            width: 200px;
+            margin: 3em auto 1em auto;
+
+        }
+
+        .button_cta {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
