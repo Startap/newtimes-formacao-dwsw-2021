@@ -10,7 +10,7 @@
     </article>
 </section>
 
-<section class="section__container">
+<section class="section__container" id="target__wrapper">
     <article class="section__article_wrapper">
         <h1 class="section__title"><?php echo $this->language['section_titles']['targets']; ?></h1>
 
@@ -46,18 +46,74 @@
 <section class="section__container">
     <article class="section__article_wrapper">
         <h1 class="section__title"><?php echo $this->language['section_titles']['bonus']; ?></h1>
+
+        <div class="bonus_group__wrapper">
+            <?php
+            $bonusHtmlElement = <<<ModuleHtml
+            <div class="bonus_item__wrapper">
+                <p class="bonus_item__description">%bonus_description</p>
+            </div>
+            ModuleHtml;
+
+            $modulesToRender = [];
+            foreach ($this->language['bonus'] as $key => $bonus) {
+                $currentBonus = str_replace('%bonus_description', $bonus, $bonusHtmlElement);
+                array_push($modulesToRender, $currentBonus);
+            }
+
+            echo implode(" ", $modulesToRender);
+            ?>
+        </div>
     </article>
 </section>
 
 <section class="section__container">
-    <article class="section__article_wrapper">
+    <article class="section__article_wrapper" id="section__about">
         <h1 class="section__title"><?php echo $this->language['section_titles']['about']; ?></h1>
+
+        <div class="about__image">
+            <img src="/assets/images/dougla_correa_profile.jpg" alt="Foto de perfil do intrutor">
+        </div>
+
+        <div class="about__description">
+            <p id="about__name"></p>
+            <p id="about__job_title"></p>
+
+            <div class="about__biography_container">
+                <?php
+                foreach ($this->language['about_instructor']['biography'] as $bioItem) {
+                    echo "<p class='about__paragraph'>$bioItem</p>";
+                }
+                ?>
+            </div>
+        </div>
     </article>
 </section>
 
 <section class="section__container">
-    <article class="section__article_wrapper">
+    <article class="section__article_wrapper faq__main_wrapper">
         <h1 class="section__title"><?php echo $this->language['section_titles']['faq']; ?></h1>
+
+        <div class="faq__wrapper">
+            <?php
+            $faqHtmlItemElement = <<<FaqHtmlElement
+                <article class="faq-card">
+                    <h6 class="faq-question"><span>%faq_question</span></h6>
+                    <p class="faq-answer"><span>%faq_answer</span></p>
+                </article>
+            FaqHtmlElement;
+
+            $faqItems = [];
+            foreach ($this->language['faq'] as $key => $faqItem) {
+                $currentFaq = $faqHtmlItemElement;
+                $currentFaq = str_replace('%faq_question', $faqItem['question'], $currentFaq);
+                $currentFaq = str_replace('%faq_answer', $faqItem['answer'], $currentFaq);
+                array_push($faqItems, $currentFaq);
+            }
+
+            echo implode(' ', $faqItems); 
+            ?>
+        </div>
     </article>
 </section>
 
