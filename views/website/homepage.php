@@ -68,6 +68,22 @@
 </section>
 
 <section class="section__container">
+    <article class="section__article_wrapper" id="section__course_price">
+        <h1 class="section__title"><?php echo $this->language['section_titles']['value_price']; ?></h1>
+
+        <div class="price__container">
+            <p class="price__header">O investimento inicial para a <b>Formação DWSW</b> é</p>
+            <p class="price__old">R$ 2.994,00 (12x de R$ 249,50)</p>
+            <p class="price__current">R$ 997,00 <br>(12x de R$ 97,14)</p>
+
+            <span class="price__limited_promotion">
+                Promoção de lançamento por tempo limitado
+            </span>
+        </div>
+    </article>
+</section>
+
+<section class="section__container">
     <article class="section__article_wrapper" id="section__about">
         <h1 class="section__title"><?php echo $this->language['section_titles']['about']; ?></h1>
 
@@ -111,7 +127,7 @@
                 array_push($faqItems, $currentFaq);
             }
 
-            echo implode(' ', $faqItems); 
+            echo implode(' ', $faqItems);
             ?>
         </div>
     </article>
@@ -120,5 +136,10 @@
 <section class="section__container">
     <article class="section__article_wrapper">
         <h1 class="section__title"><?php echo $this->language['section_titles']['disclaimer']; ?></h1>
+
+        <div class="disclaimer__content_wrapper">
+            <h2><?php echo $this->language['disclaimer']['title']; ?></h2>
+            <p><?php echo $this->language['disclaimer']['description']; ?></p>
+        </div>
     </article>
 </section>

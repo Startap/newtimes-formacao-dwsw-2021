@@ -3,6 +3,7 @@
         'section_titles' => [
             'targets' => 'Quem pode fazer essa formação?',
             'modules' => 'O que a gente oferece de conteúdo',
+            'value_price' => 'Qual o valor do investimento',
             'bonus' => 'Bônus exclusivos da formação',
             'about' => 'Sobre o instrutor da formação DWSW',
             'faq' => 'Perguntas mais frequentes',
@@ -76,7 +77,7 @@
         ],
         
         'footer' => [
-            'DS Correa - Consultoria em Informática',
-            '09.074.890/0001-50',
+            'title' => 'DS Correa - Consultoria em Informática',
+            'cnpj' => '09.074.890/0001-50',
         ]
     ];
