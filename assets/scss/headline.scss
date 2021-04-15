@@ -16,10 +16,18 @@
     background-color: $color-light-purple;
     position: relative;
     z-index: 0;
-    
+
     @media screen and (min-width: $breakpoint-desktop) {
         height: fit-content;
         padding-top: 8em;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     &:after {

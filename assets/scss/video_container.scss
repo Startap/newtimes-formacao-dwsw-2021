@@ -1,0 +1,37 @@
+@use "variables.scss";
+
+.iframe-container-width {
+    max-width: 700px;
+}
+
+.youtube__container {
+    margin: 1em auto 2em auto;
+    width: 80%;
+    z-index: 4;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: 40vw !important;
+        margin: 0 auto;
+    }
+}
+
+#iframe-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    grid-area: video;
+    box-shadow: 0px 10px 25px -15px #010000;
+}
+
+#iframe-video-container iframe, #iframe-video-container object, #iframe-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#iframe-video-container .ytp-impression-link {
+    display: none !important;
+}

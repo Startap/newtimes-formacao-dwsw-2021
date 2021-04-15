@@ -8,6 +8,21 @@
             <button class="button_cta"><span><?php echo $this->language['headline']['button_cta']; ?></span></button>
         </a>
     </article>
+
+    <article class="youtube__container">
+        <div class="iframe-container-width">
+            <div id="iframe-video-container">
+                <?php 
+                    $youtubeVideoId = getenv('YOUTUBE_VIDEO');
+                    $youtubeUrl = 'https://www.youtube.com/embed/%videoId?controls=0&modestbranding=1&showinfo=0&rel=0';
+                    $youtubeUrl = str_replace('%videoId', $youtubeVideoId, $youtubeUrl);
+                ?>
+
+                <iframe id="iframe-video" src="<?php echo $youtubeUrl; ?>" title="YouTube - Mentoria Advogado Expert" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </article>
 </section>
 
 <section class="section__container" id="target__wrapper">
