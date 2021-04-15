@@ -6,11 +6,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: lighten($color-light-purple, 28%);
+    background: lighten($color-light-purple, 40%);
     color: $color-dark-purple;
     box-shadow: 0 4px 10px -4px rgba(0,0,0,.5);
     z-index: 0;
-    border-bottom: 3px solid darken($color-light-purple, 10%);
+    border-bottom: 3px solid lighten($color-light-purple, 60%);
     position: relative;
 
     &:after {
@@ -22,7 +22,7 @@
         position: absolute;
         background: url('/assets/images/icon__star_rate.svg') no-repeat left center / contain;
         z-index: -1;
-        opacity: 0.1
+        opacity: 0.2
     }
 
     @media screen and (max-width: $breakpoint-mobile) {

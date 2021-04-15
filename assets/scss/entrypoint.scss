@@ -7,6 +7,10 @@
 @import "bonus_container.scss";
 @import "faq.scss";
 
+* {
+    text-rendering: optimizeLegibility;
+}
+
 body {
     font-size: $font-size-default;
     font-family: $font-face-body;
@@ -31,10 +35,6 @@ section {
 
 b {
     font-weight: bold;
-}
-
-footer {
-    width: 100%;
 }
 
 h1,
@@ -79,7 +79,6 @@ h3 {
         line-height: 300%;
     }
 
-
     &:after {
         position: relative;
         content: "_";
@@ -96,9 +95,25 @@ h3 {
     text-align: center;
     display: block;
     box-sizing: border-box;
-    margin: 2em auto 0.5em;
+    margin: 2em auto 1.5em;
     font-weight: bold;
     color: $color-pure-white;
+    position: relative;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        &:after {
+            content: "";
+            width: 100px;
+            height: 5px;
+            border-radius: 10px;
+            background-color: $color-pure-white;
+            margin: auto;
+            z-index: 1;
+            position: absolute;
+            bottom: -15px;
+            left: 10%;
+        }
+    }
 }
 
 #target__text {
@@ -142,6 +157,10 @@ h3 {
         border: none;
         box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.4);
     }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        text-align: center;
+    }
 }
 
 .about__description {
@@ -162,9 +181,9 @@ h3 {
 }
 
 #section__about {
-    padding: 0 0 2em 0;
-    background: $color-dark-purple;
-    margin-top: 2em;
+    padding: 2em 0 4em 0;
+    background: $color-dark-purple url('/assets/images/about__background.jpg') no-repeat center center / cover;
+    background-blend-mode: multiply;
 
     @media screen and (min-width: $breakpoint-tablet) {
         display: grid;
@@ -183,6 +202,162 @@ h3 {
         .about__biography_container {
             grid-area: paragraph;
             margin-top: 0;
+        }
+    }
+}
+
+.disclaimer__content_wrapper {
+    max-width: 800px;
+    margin: 3em auto 1em auto;
+    padding: 3em 2em;
+    box-sizing: border-box;
+
+    color: $color-pure-white;
+    background: $color-dark-purple;
+
+    position: relative;
+    z-index: 0;
+
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    p {
+        line-height: 120%;
+    }
+
+    &:after {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        background: url("/assets/images/warning_mark.svg") no-repeat -3em center / contain;
+        opacity: 0.1;
+        content: "";
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    padding: 4em 0 2em 0;
+    margin-top: 6em;
+    background-color: $color-dark-purple;
+    width: 100%;
+    box-shadow: 0 10px 20px -15px rgba(0, 0, 0, .4) inset;
+
+    .left_side,
+    .right_side {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0 2em;
+        font-family: $font-face-body;
+        color: $color-pure-white;
+    }
+
+    .left_side span {
+        font-size: 0.9em;
+        color: $color-pure-white;
+        margin-bottom: 5px;
+    }
+
+    .right_side {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        a {
+            width: fit-content;
+            margin-right: 25px;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                transform: translateY(-5px) scale(1.1);
+            }
+        }
+
+        img {
+            height: 1.4em;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+
+
+        .left_side {
+            text-align: left
+        }
+
+        .right_side {
+            justify-content: center;
+            margin-top: 30px;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        .left_side,
+        .right_side {
+            flex-basis: 49%;
+        }
+    }
+}
+
+#section__course_price {
+    background: $color-pure-white;
+    padding: 1em 0;
+    margin: 2em auto 0 auto;
+
+    .section__title {
+        color: $color-dark-purple;
+        padding: 0em auto 1.5em;
+    }
+    
+    .price__container {
+        color: $color-light-purple;
+        text-align: center;
+        line-height: 120%;
+        font-family: $font-face-title;
+
+        .price__header {
+            font-size: 1.1em;
+        }
+        .price__old {
+            text-decoration: line-through;
+            font-size: 0.9em;
+            font-size: 0.9em;
+            color: #ec7575;
+        }
+        .price__current {
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-top: 5px;
+            color: #2fdc24;
+        }
+
+        .price__limited_promotion {
+            width: fit-content;
+            font-variant: all-small-caps;
+            margin: 2em auto 1em auto;
+            display: block;
+            font-weight: bold;
+            font-size: 1.4em;
+            padding: 1em 1.8em;
+            color: $color-pure-white;
+            background: $color-light-purple;
+            box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .4);
+
+            @media screen and (min-width: $breakpoint-tablet) {
+                transform: skew(-4deg, 0deg);
+        
+            }
         }
     }
 }
