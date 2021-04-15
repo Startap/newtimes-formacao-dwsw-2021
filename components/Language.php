@@ -1,12 +1,12 @@
 <?php
     return [
         'section_titles' => [
-            'targets' => 'Para quem desenhamos essa formação',
-            'modules' => 'Os módulos de conteúdo que oferecemos',
-            'bonus' => 'Também tem bônus exclusivo para os alunos',
+            'targets' => 'Quem pode fazer essa formação?',
+            'modules' => 'O que a gente oferece de conteúdo',
+            'bonus' => 'Bônus exclusivos da formação',
             'about' => 'Sobre o instrutor da formação DWSW',
-            'faq' => 'Perguntas mais frequentes sobre a formação',
-            'disclaimer' => 'Uma informação importante sobre o conteúdo'
+            'faq' => 'Perguntas mais frequentes',
+            'disclaimer' => 'Informações importantes'
         ],
         
         'headline' => [
@@ -51,15 +51,15 @@
         ],
 
         'faq' => [
-            [ 'title' => 'O que é esse curso?', 'answer' => 'A gente prefere chamar de FORMAÇÃO. Vamos te dar toda a base para começar a ser desenvolvedor web do zero e entrar no mercado de trabalho.' ],
-            [ 'title' => 'O que é esse tal de SMALL WINS?', 'answer' => 'É um método que nós criamos. SMALL WINS é um método baseado em pequenos passos e conquistas para, aos poucos, você alcançar a maestria no desenvolvimento web.' ],
-            [ 'title' => 'Como eu posso me inscrever?', 'answer' => 'Tem botões por toda a página que vão te levar direto para a página de inscrição. Basta você clicar em qualquer um deles e se inscrever.' ],
-            [ 'title' => 'Quando terei meu acesso liberado?', 'answer' => 'Assim que a plataforma processar seu pagamento e estiver tudo OK você vai receber no seu e-mail um usuário e senha para acessar nossas aula.' ],
-            [ 'title' => 'Como é o acesso às aulas do curso?', 'answer' => 'É uma plataforma online. Você pode acessar do celular, tablet ou computador. Tudo que você precisa é de acesso à internet e um dispositivo para acessar a plataforma.' ],
-            [ 'title' => 'Por quanto tempo as aulas ficarão disponíveis?', 'answer' => 'Nossas aula ficam disponíveis para você por um ano a partir da confirmação de pagamento. Acreditamos que é o suficiente para aprender, colocar tudo em prática e entrar no mercado de trabalho com tudo.' ],
-            [ 'title' => 'Há alguém para tirar dúvidas durante o curso?', 'answer' => 'SIM. Teremos mentores e o próprio professor tirando dúvidas durante o curso. Além, é claro, das nossas comunidades secretas de apoio e networking.' ],
-            [ 'title' => 'O que é a garantia incondicional mencionada?', 'answer' => 'É uma garantia da plataforma que garante a devolução do seu dinheiro EM ATÉ SETE DIAS caso você não esteja satisfeito com o nosso produto.' ],
-            [ 'title' => 'Estou pensando em entrar na próxima turma, que tal?', 'answer' => 'A gente não recomenda. Essa turma tem vagas limitadas e, por enquanto, não sabemos quando vamos abrir outra. A gente sugere que você não perca tempo e faça já sua inscrição.' ]
+            [ 'question' => 'O que é esse curso?', 'answer' => 'A gente prefere chamar de FORMAÇÃO. Vamos te dar toda a base para começar a ser desenvolvedor web do zero e entrar no mercado de trabalho.' ],
+            [ 'question' => 'O que é esse tal de SMALL WINS?', 'answer' => 'É um método que nós criamos. SMALL WINS é um método baseado em pequenos passos e conquistas para, aos poucos, você alcançar a maestria no desenvolvimento web.' ],
+            [ 'question' => 'Como eu posso me inscrever?', 'answer' => 'Tem botões por toda a página que vão te levar direto para a página de inscrição. Basta você clicar em qualquer um deles e se inscrever.' ],
+            [ 'question' => 'Quando terei meu acesso liberado?', 'answer' => 'Assim que a plataforma processar seu pagamento e estiver tudo OK você vai receber no seu e-mail um usuário e senha para acessar nossas aula.' ],
+            [ 'question' => 'Como é o acesso às aulas do curso?', 'answer' => 'É uma plataforma online. Você pode acessar do celular, tablet ou computador. Tudo que você precisa é de acesso à internet e um dispositivo para acessar a plataforma.' ],
+            [ 'question' => 'Por quanto tempo as aulas ficarão disponíveis?', 'answer' => 'Nossas aula ficam disponíveis para você por um ano a partir da confirmação de pagamento. Acreditamos que é o suficiente para aprender, colocar tudo em prática e entrar no mercado de trabalho com tudo.' ],
+            [ 'question' => 'Há alguém para tirar dúvidas durante o curso?', 'answer' => 'SIM. Teremos mentores e o próprio professor tirando dúvidas durante o curso. Além, é claro, das nossas comunidades secretas de apoio e networking.' ],
+            [ 'question' => 'O que é a garantia incondicional mencionada?', 'answer' => 'É uma garantia da plataforma que garante a devolução do seu dinheiro EM ATÉ SETE DIAS caso você não esteja satisfeito com o nosso produto.' ],
+            [ 'question' => 'Estou pensando em entrar na próxima turma, que tal?', 'answer' => 'A gente não recomenda. Essa turma tem vagas limitadas e, por enquanto, não sabemos quando vamos abrir outra. A gente sugere que você não perca tempo e faça já sua inscrição.' ]
         ],
 
         'disclaimer' => [
